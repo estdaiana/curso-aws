@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html
+    overwrite: true
+
+file_exists_behavior: OVERWRITE
+
+hooks: 
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 3600
+      runas: root
+  BeforeInstall:
+    - location: scripts/install_dependecies
+      timeout: 3600
+      runas: root
+  ApplicationStart:
+    - location: scripts/star_server
+      timeout: 3600
+      runas: root
