@@ -17,6 +17,6 @@ hooks:
       timeout: 3600
       runas: root
   ApplicationStart:
-    - location: scripts/star_server
+    - location: scripts/start_server
       timeout: 3600
       runas: root
