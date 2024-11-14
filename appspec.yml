@@ -7,7 +7,7 @@ files:
 
 file_exists_behavior: OVERWRITE
 
-hooks: 
+hooks:
   ApplicationStop:
     - location: scripts/stop_server
       timeout: 3600
